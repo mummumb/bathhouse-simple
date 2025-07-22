@@ -1,7 +1,6 @@
 import { Suspense } from "react"
 import HeroVideoSection from "@/components/hero-video-section"
 import AufgussSimple from "@/components/aufguss-simple"
-import ProcessJourney from "@/components/process-journey"
 import PreparationSection from "@/components/preparation-section"
 import ContactFormSimple from "@/components/contact-form-simple"
 import { IMAGE_URLS } from "@/lib/constants/images"
@@ -68,10 +67,7 @@ export default async function HomePage() {
       {/* Aufguss Icons and Benefits */}
       <AufgussSimple />
 
-      {/* Process Journey Section */}
-      <ProcessJourney />
-
-      {/* Preparation Section */}
+      {/* Benefits Section */}
       <PreparationSection />
 
       {/* Upcoming Events */}

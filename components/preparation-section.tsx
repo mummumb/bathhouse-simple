@@ -1,74 +1,51 @@
 export default function PreparationSection() {
-  const preparations = [
+  const benefits = [
     {
-      icon: "/icons/cold-plunge.png",
-      title: "Shower before entering",
-      description: "Cleanse your body to prepare for the ritual"
+      title: "Deep Detoxification",
+      description: "Enhanced sweating promotes the elimination of toxins and metabolic waste"
     },
     {
-      icon: "/icons/lounge.png",
-      title: "Use a towel",
-      description: "Always sit on a clean towel in the sauna"
+      title: "Improved Circulation",
+      description: "Heat therapy dilates blood vessels, improving oxygen and nutrient delivery"
     },
     {
-      icon: "/icons/breathwork.png",
-      title: "Bare feet",
-      description: "Remove shoes and socks for the authentic experience"
+      title: "Stress Relief",
+      description: "The ritual creates a meditative state that calms the nervous system"
     },
     {
-      icon: "/icons/hot-plunge.png",
-      title: "Hydrate before & after",
-      description: "Drink plenty of water to support your body"
-    }
-  ]
-
-  const stats = [
-    {
-      value: "15-20",
-      label: "Minutes"
+      title: "Enhanced Recovery",
+      description: "Alternating heat and cold accelerates muscle recovery and reduces inflammation"
     },
     {
-      value: "80-90°C",
-      label: "Temperature"
+      title: "Better Sleep",
+      description: "Regular sauna use helps regulate circadian rhythms and improve sleep quality"
+    },
+    {
+      title: "Community Connection",
+      description: "Shared rituals foster meaningful connections and social wellbeing"
     }
   ]
 
   return (
-    <section className="bathhouse-section bg-white">
+    <section className="bathhouse-section bg-bathhouse-cream">
       <div className="bathhouse-container">
         <div className="text-center mb-12">
           <h2 className="bathhouse-heading text-4xl md:text-5xl mb-6 text-bathhouse-black">
-            How to Prepare for an Aufguss Experience
+            Benefits
           </h2>
           <p className="text-lg text-bathhouse-slate max-w-3xl mx-auto">
-            A gentle guide to help you feel comfortable and prepared for your ritual.
+            Experience the transformative power of traditional sauna rituals for body and mind.
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
-          {preparations.map((item, index) => (
-            <div key={index} className="bg-bathhouse-stone/20 rounded-lg p-8 text-center">
-              <div className="bg-white rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-4">
-                <img src={item.icon} alt={item.title} className="w-12 h-12" />
-              </div>
-              <h3 className="bathhouse-subheading text-lg font-medium mb-3 text-bathhouse-black">
-                {item.title}
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5xl mx-auto">
+          {benefits.map((benefit, index) => (
+            <div key={index} className="text-center">
+              <h3 className="bathhouse-subheading text-xl font-medium mb-3 text-bathhouse-black">
+                {benefit.title}
               </h3>
-              <p className="text-bathhouse-slate text-sm">
-                {item.description}
-              </p>
-            </div>
-          ))}
-        </div>
-
-        <div className="flex justify-center gap-8">
-          {stats.map((stat, index) => (
-            <div key={index} className="bg-bathhouse-stone/20 rounded-lg px-12 py-8 text-center">
-              <p className="bathhouse-heading text-3xl md:text-4xl mb-2 text-bathhouse-black">
-                {stat.value}
-              </p>
-              <p className="text-bathhouse-slate">
-                {stat.label}
+              <p className="text-bathhouse-slate leading-relaxed">
+                {benefit.description}
               </p>
             </div>
           ))}
