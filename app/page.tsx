@@ -1,6 +1,7 @@
 import { Suspense } from "react"
 import HeroVideoSection from "@/components/hero-video-section"
 import AufgussSimple from "@/components/aufguss-simple"
+import ValuesSimple from "@/components/values-simple"
 import ContactSection from "@/components/contact-section"
 import { IMAGE_URLS } from "@/lib/constants/images"
 
@@ -33,23 +34,34 @@ export default async function HomePage() {
       {/* Meet the Sauna Master */}
       <section className="bathhouse-section bg-white">
         <div className="bathhouse-container">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="bathhouse-heading text-4xl md:text-5xl mb-8 text-bathhouse-black">Meet the Sauna Master</h2>
-            <h3 className="bathhouse-heading text-2xl md:text-3xl mb-6 text-bathhouse-black">Amanda</h3>
-            <blockquote className="text-xl md:text-2xl italic text-bathhouse-slate mb-12 max-w-3xl mx-auto">
-              "A Sauna is not just about heat—it's about community, ritual, and the transformative power of intentional wellness."
-            </blockquote>
-            <img 
-              src="/images/amanda-sauna-peaceful.jpg" 
-              alt="Amanda - Sauna Master" 
-              className="mx-auto rounded-lg shadow-lg max-w-md w-full"
-            />
+          <div className="grid lg:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
+            <div className="order-2 lg:order-1">
+              <img 
+                src="/images/amanda-sauna-peaceful.jpg" 
+                alt="Amanda - Sauna Master" 
+                className="rounded-lg shadow-lg w-full"
+              />
+            </div>
+            <div className="order-1 lg:order-2 text-center lg:text-left">
+              <h2 className="bathhouse-heading text-4xl md:text-5xl mb-4 text-bathhouse-black">Meet the Sauna Master</h2>
+              <h3 className="bathhouse-heading text-2xl md:text-3xl mb-8 text-bathhouse-black">Amanda</h3>
+              <blockquote className="relative">
+                <span className="text-6xl text-bathhouse-teal/20 absolute -top-4 -left-2 leading-none">"</span>
+                <p className="text-xl md:text-2xl italic text-bathhouse-slate relative z-10">
+                  A Sauna is not just about heat—it's about community, ritual, and the transformative power of intentional wellness.
+                </p>
+                <span className="text-6xl text-bathhouse-teal/20 absolute -bottom-8 right-0 leading-none">"</span>
+              </blockquote>
+            </div>
           </div>
         </div>
       </section>
 
       {/* Aufguss Icons and Benefits */}
       <AufgussSimple />
+
+      {/* Values Section */}
+      <ValuesSimple />
 
       {/* Upcoming Events */}
       <section className="bathhouse-section bg-bathhouse-cream">
