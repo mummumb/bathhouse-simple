@@ -1,34 +1,94 @@
+/* Custom Font Definitions */
+@font-face {
+  font-family: 'Bagoss Standard';
+  src: url('/fonts/BagossStandard-TRIAL-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Bagoss Standard';
+  src: url('/fonts/BagossStandard-TRIAL-Thin.woff2') format('woff2');
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 :root {
-  /* Bathhouse Studio Brand Colors - Exact matches from style guide */
-  --bathhouse-black: #000000; /* Pantone Black 6 C */
-  --bathhouse-white: #ffffff; /* Standard White */
-  --bathhouse-cream: #f2ebde; /* Pantone 9224 C */
-  --bathhouse-slate: #5a6870; /* Pantone 431 C */
-  --bathhouse-sand: #cebdaa; /* Pantone 4735 C (Stone) */
-  --bathhouse-teal: #598c82; /* Pantone 747 5 C (Green) */
-  --bathhouse-rose: #b59597; /* Pantone 500 C (Pink) */
-  --bathhouse-sage: #78909c; /* Pantone 2165 C (Blue) */
-  --bathhouse-warm: #e2be9c; /* Pantone 473 C (Peach) */
+  /* Bathhouse Studio Brand Colors - Official Pantone Colors */
+  --bathhouse-black: #000000; /* BLACK - CMYK: 0,0,0,100 */
+  --bathhouse-cream: #f2ebde; /* CREAM - Pantone 9224 C - CMYK: 6,7,15,0 */
+  --bathhouse-slate: #5a6870; /* SLATE - Pantone 431 C - CMYK: 63,45,34,25 */
+  --bathhouse-stone: #cebdaa; /* STONE - Pantone 4735 C - CMYK: 17,31,33,4 */
+  --bathhouse-green: #598c82; /* GREEN - Pantone 7475 C - CMYK: 70,25,36,21 */
+  --bathhouse-pink: #b59597; /* PINK - Pantone 500 C - CMYK: 12,50,21,5 */
+  --bathhouse-white: #ffffff; /* WHITE - CMYK: 0,0,0,0 */
+  --bathhouse-blue: #78909c; /* BLUE - Pantone 2165 C - CMYK: 59,35,18,10 */
+  --bathhouse-peach: #e2be9c; /* PEACH - Pantone 473 C - CMYK: 0,24,33,0 */
+  
+  /* Semantic aliases */
+  --bathhouse-teal: #598c82; /* Alias for GREEN */
+  --bathhouse-rose: #b59597; /* Alias for PINK */
+  --bathhouse-sage: #78909c; /* Alias for BLUE */
+  --bathhouse-warm: #e2be9c; /* Alias for PEACH */
+  --bathhouse-sand: #cebdaa; /* Alias for STONE */
 }
 
 @layer base {
   body {
+    font-family: 'Inter Tight', system-ui, -apple-system, sans-serif;
     font-feature-settings: "rlig" 1, "calt" 1;
+    font-weight: 300;
+    font-size: 1.125rem; /* 18px base */
+    line-height: 1.75;
+    @apply bg-bathhouse-cream text-bathhouse-slate;
   }
 
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    font-family: theme(fontFamily.heading);
-    font-weight: 300;
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Bagoss Standard', serif;
+    font-weight: 400;
     letter-spacing: -0.025em;
+    line-height: 1.2;
+    @apply text-bathhouse-black;
+  }
+
+  h1 {
+    font-size: 3rem; /* 48px mobile */
+  }
+  
+  @media (min-width: 768px) {
+    h1 {
+      font-size: 3.75rem; /* 60px desktop */
+    }
+  }
+
+  h2 {
+    font-size: 2.25rem; /* 36px mobile */
+  }
+  
+  @media (min-width: 768px) {
+    h2 {
+      font-size: 3rem; /* 48px desktop */
+    }
+  }
+
+  h3 {
+    font-size: 1.5rem; /* 24px mobile */
+  }
+  
+  @media (min-width: 768px) {
+    h3 {
+      font-size: 1.875rem; /* 30px desktop */
+    }
+  }
+
+  h4, h5, h6 {
+    font-size: 1.25rem; /* 20px */
   }
 }
 
@@ -46,14 +106,14 @@
   }
 
   .bathhouse-heading {
-    font-family: theme(fontFamily.heading);
-    font-weight: 300;
+    font-family: 'Bagoss Standard', serif !important;
+    font-weight: 400;
     letter-spacing: -0.025em;
   }
 
   .bathhouse-subheading {
-    @apply font-sans;
-    font-weight: 400;
+    font-family: 'Inter Tight', system-ui, -apple-system, sans-serif;
+    font-weight: 300;
     letter-spacing: -0.01em;
   }
 
@@ -77,11 +137,11 @@
   }
 
   .overflow-x-auto::-webkit-scrollbar-thumb {
-    background: theme(colors.bathhouse.slate);
+    background: theme(colors.bathhouse-slate);
     border-radius: 2px;
   }
 
   .overflow-x-auto::-webkit-scrollbar-thumb:hover {
-    background: theme(colors.bathhouse.teal);
+    background: theme(colors.bathhouse-teal);
   }
 }

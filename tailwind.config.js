@@ -22,12 +22,14 @@ module.exports = {
   	extend: {
   		fontFamily: {
   			sans: [
-  				'var(--font-inter)',
+  				'Inter Tight',
+  				'var(--font-inter-tight)',
                     ...fontFamily.sans
                 ],
   			heading: [
-  				'var(--font-outfit)',
-  				...fontFamily.sans
+  				'Bagoss Standard',
+  				'var(--font-bagoss-standard)',
+  				'serif'
   			]
   		},
   		colors: {
