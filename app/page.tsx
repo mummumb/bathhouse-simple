@@ -2,7 +2,7 @@ import { Suspense } from "react"
 import HeroVideoSection from "@/components/hero-video-section"
 import AufgussSimple from "@/components/aufguss-simple"
 import ValuesSimple from "@/components/values-simple"
-import ContactSection from "@/components/contact-section"
+import ContactFormSimple from "@/components/contact-form-simple"
 import { IMAGE_URLS } from "@/lib/constants/images"
 
 export const dynamic = 'force-dynamic'
@@ -105,7 +105,7 @@ export default async function HomePage() {
       </section>
 
       {/* Contact Form */}
-      <ContactSection />
+      <ContactFormSimple />
     </>
   )
 }
