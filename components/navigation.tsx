@@ -28,7 +28,7 @@ export default function Navigation() {
         "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
         scrolled
           ? "bg-white/95 backdrop-blur-sm shadow-sm py-3" 
-          : "bg-transparent py-5"
+          : "bg-white/90 backdrop-blur-sm py-5"
       )}
     >
       <div className="bathhouse-container">
@@ -36,7 +36,7 @@ export default function Navigation() {
           {/* Logo Only - Centered */}
           <Link href="/" className="relative z-10">
             <Image
-              src={scrolled ? "/images/BathhouseStudio_Logo_RGB_Black.svg" : "/images/BathhouseStudio_Logo_RGB_REV.svg"}
+              src="/images/BathhouseStudio_Logo_RGB_Black.svg"
               alt="Bathhouse Studio"
               width={180}
               height={40}
