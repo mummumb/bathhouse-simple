@@ -98,7 +98,7 @@ export default function ContactFormSimple() {
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className="inline-block bg-bathhouse-black text-bathhouse-white px-8 py-3 rounded-md hover:bg-bathhouse-slate transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+                  className="inline-block bg-bathhouse-black text-bathhouse-white px-8 py-3 rounded-md hover:bg-bathhouse-slate transition-colors disabled:opacity-50 disabled:cursor-not-allowed font-normal tracking-wide"
                 >
                   {isSubmitting ? "Sending..." : "Send Message"}
                 </button>

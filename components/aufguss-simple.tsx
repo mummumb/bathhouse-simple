@@ -3,27 +3,27 @@ import { Droplets, Wind, Music, Waves, Brain, Sparkles, Heart, Zap, Eye } from "
 export default function AufgussSimple() {
   const icons = [
     {
-      icon: <Wind className="w-12 h-12 mx-auto mb-4 text-bathhouse-teal" />,
+      icon: <Wind className="w-12 h-12 mx-auto mb-4 text-bathhouse-black" />,
       title: "Steam",
       description: "Carefully controlled heat and humidity"
     },
     {
-      icon: <Droplets className="w-12 h-12 mx-auto mb-4 text-bathhouse-teal" />,
+      icon: <Droplets className="w-12 h-12 mx-auto mb-4 text-bathhouse-black" />,
       title: "Aromatherapy",
       description: "Essential oils chosen for their therapeutic properties"
     },
     {
-      icon: <Music className="w-12 h-12 mx-auto mb-4 text-bathhouse-teal" />,
+      icon: <Music className="w-12 h-12 mx-auto mb-4 text-bathhouse-black" />,
       title: "Curated Music",
       description: "Soundscapes that guide the journey"
     },
     {
-      icon: <Waves className="w-12 h-12 mx-auto mb-4 text-bathhouse-teal" />,
+      icon: <Waves className="w-12 h-12 mx-auto mb-4 text-bathhouse-black" />,
       title: "Towel Work",
       description: "Choreographed movements that distribute heat"
     },
     {
-      icon: <Brain className="w-12 h-12 mx-auto mb-4 text-bathhouse-teal" />,
+      icon: <Brain className="w-12 h-12 mx-auto mb-4 text-bathhouse-black" />,
       title: "Mindful Guidance",
       description: "The presence and expertise of a master"
     }
@@ -31,24 +31,20 @@ export default function AufgussSimple() {
 
   const benefits = [
     {
-      icon: <Sparkles className="w-8 h-8 text-bathhouse-teal" />,
-      title: "Deep Detoxification",
-      color: "bg-bathhouse-cream"
+      icon: <Sparkles className="w-8 h-8 text-bathhouse-black" />,
+      title: "Deep Detoxification"
     },
     {
-      icon: <Heart className="w-8 h-8 text-bathhouse-rose" />,
-      title: "Improved Circulation",
-      color: "bg-rose-50"
+      icon: <Heart className="w-8 h-8 text-bathhouse-black" />,
+      title: "Improved Circulation"
     },
     {
-      icon: <Zap className="w-8 h-8 text-bathhouse-sage" />,
-      title: "Calm & Clarity",
-      color: "bg-blue-50"
+      icon: <Zap className="w-8 h-8 text-bathhouse-black" />,
+      title: "Calm & Clarity"
     },
     {
-      icon: <Eye className="w-8 h-8 text-bathhouse-stone" />,
-      title: "Mindful Presence",
-      color: "bg-stone-50"
+      icon: <Eye className="w-8 h-8 text-bathhouse-black" />,
+      title: "Mindful Presence"
     }
   ]
 
@@ -77,7 +73,7 @@ export default function AufgussSimple() {
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-5xl mx-auto">
             {benefits.map((benefit, index) => (
               <div key={index} className="text-center">
-                <div className={`${benefit.color} w-20 h-20 rounded-lg flex items-center justify-center mx-auto mb-4`}>
+                <div className="bg-bathhouse-cream border border-bathhouse-stone w-20 h-20 rounded-lg flex items-center justify-center mx-auto mb-4">
                   {benefit.icon}
                 </div>
                 <h3 className="bathhouse-subheading text-lg font-medium text-bathhouse-black">{benefit.title}</h3>

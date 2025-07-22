@@ -111,33 +111,37 @@ export default function HeroVideoSection({
               {subtitle}
             </p>
             
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-              <Link href={ctaLink} className="w-full sm:w-auto">
-                <Button className="bg-bathhouse-teal hover:bg-bathhouse-teal/90 text-white border-none px-8 py-6 text-base font-normal tracking-wide rounded-md w-full sm:w-auto">
-                  {ctaText}
-                </Button>
-              </Link>
-              
-              {videoUrl && (
-                <button
-                  onClick={togglePlayPause}
-                  className="flex items-center text-white gap-2 hover:text-white/80 transition-colors mt-2 sm:mt-0"
-                  aria-label={isPlaying ? "Pause video" : "Play video"}
-                >
-                  {isPlaying ? (
-                    <>
-                      <PauseCircle className="h-6 w-6" />
-                      <span className="text-sm font-medium">Pause</span>
-                    </>
-                  ) : (
-                    <>
-                      <PlayCircle className="h-6 w-6" />
-                      <span className="text-sm font-medium">Play</span>
-                    </>
-                  )}
-                </button>
-              )}
-            </div>
+            {(ctaText || videoUrl) && (
+              <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+                {ctaText && (
+                  <Link href={ctaLink} className="w-full sm:w-auto">
+                    <Button className="bg-bathhouse-teal hover:bg-bathhouse-teal/90 text-white border-none px-8 py-6 text-base font-normal tracking-wide rounded-md w-full sm:w-auto">
+                      {ctaText}
+                    </Button>
+                  </Link>
+                )}
+                
+                {videoUrl && (
+                  <button
+                    onClick={togglePlayPause}
+                    className="flex items-center text-white gap-2 hover:text-white/80 transition-colors mt-2 sm:mt-0"
+                    aria-label={isPlaying ? "Pause video" : "Play video"}
+                  >
+                    {isPlaying ? (
+                      <>
+                        <PauseCircle className="h-6 w-6" />
+                        <span className="text-sm font-medium">Pause</span>
+                      </>
+                    ) : (
+                      <>
+                        <PlayCircle className="h-6 w-6" />
+                        <span className="text-sm font-medium">Play</span>
+                      </>
+                    )}
+                  </button>
+                )}
+              </div>
+            )}
           </div>
         </div>
       </div>

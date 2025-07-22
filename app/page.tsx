@@ -75,30 +75,30 @@ export default async function HomePage() {
             Join us for transformative wellness experiences across Australia and internationally.
           </p>
           <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-            <div className="bg-white p-8 rounded-lg shadow-sm">
+            <div className="bg-white p-8 rounded-lg shadow-sm border border-bathhouse-stone/20">
               <p className="text-sm text-bathhouse-slate/70 mb-2">August 15, 2025</p>
               <p className="text-sm text-bathhouse-slate mb-4">Melbourne, VIC</p>
               <h3 className="bathhouse-heading text-2xl mb-4 text-bathhouse-black">Aufguss, A Sauna Ritual</h3>
               <p className="text-bathhouse-slate mb-6">An immersive, multi-sensory experience guided by a Sauna Master to the rhythm of music, heat, and aromatherapy.</p>
               <div className="space-y-3">
-                <a href="/book" className="block w-full text-center bg-bathhouse-black text-bathhouse-white px-6 py-3 rounded-md hover:bg-bathhouse-slate transition-colors">
+                <a href="/book" className="block w-full text-center bg-bathhouse-black text-bathhouse-white px-6 py-3 rounded-md hover:bg-bathhouse-slate transition-colors font-normal">
                   Find Out More
                 </a>
-                <a href="/book" className="block w-full text-center border border-bathhouse-black text-bathhouse-black px-6 py-3 rounded-md hover:bg-bathhouse-cream transition-colors">
+                <a href="/book" className="block w-full text-center border border-bathhouse-black text-bathhouse-black px-6 py-3 rounded-md hover:bg-bathhouse-stone/10 transition-colors font-normal">
                   Register Interest
                 </a>
               </div>
             </div>
-            <div className="bg-white p-8 rounded-lg shadow-sm">
+            <div className="bg-white p-8 rounded-lg shadow-sm border border-bathhouse-stone/20">
               <p className="text-sm text-bathhouse-slate/70 mb-2">September 5, 2025</p>
               <p className="text-sm text-bathhouse-slate mb-4">Sydney, NSW</p>
               <h3 className="bathhouse-heading text-2xl mb-4 text-bathhouse-black">Cold Water Immersion</h3>
               <p className="text-bathhouse-slate mb-6">Build resilience and unlock your potential with guided cold plunge sessions. Learn techniques to control your breath and mind in the face of stress.</p>
               <div className="space-y-3">
-                <a href="/book" className="block w-full text-center bg-bathhouse-black text-bathhouse-white px-6 py-3 rounded-md hover:bg-bathhouse-slate transition-colors">
+                <a href="/book" className="block w-full text-center bg-bathhouse-black text-bathhouse-white px-6 py-3 rounded-md hover:bg-bathhouse-slate transition-colors font-normal">
                   Find Out More
                 </a>
-                <a href="/book" className="block w-full text-center border border-bathhouse-black text-bathhouse-black px-6 py-3 rounded-md hover:bg-bathhouse-cream transition-colors">
+                <a href="/book" className="block w-full text-center border border-bathhouse-black text-bathhouse-black px-6 py-3 rounded-md hover:bg-bathhouse-stone/10 transition-colors font-normal">
                   Register Interest
                 </a>
               </div>
