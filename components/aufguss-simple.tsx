@@ -1,4 +1,4 @@
-import { Droplets, Wind, Music, Waves, Brain } from "lucide-react"
+import { Droplets, Wind, Music, Waves, Brain, Sparkles, Heart, Zap, Eye } from "lucide-react"
 
 export default function AufgussSimple() {
   const icons = [
@@ -30,10 +30,26 @@ export default function AufgussSimple() {
   ]
 
   const benefits = [
-    "Deep Detoxification",
-    "Improved Circulation",
-    "Calm & Clarity",
-    "Mindful Presence"
+    {
+      icon: <Sparkles className="w-8 h-8 text-bathhouse-teal" />,
+      title: "Deep Detoxification",
+      color: "bg-bathhouse-cream"
+    },
+    {
+      icon: <Heart className="w-8 h-8 text-bathhouse-rose" />,
+      title: "Improved Circulation",
+      color: "bg-rose-50"
+    },
+    {
+      icon: <Zap className="w-8 h-8 text-bathhouse-sage" />,
+      title: "Calm & Clarity",
+      color: "bg-blue-50"
+    },
+    {
+      icon: <Eye className="w-8 h-8 text-bathhouse-stone" />,
+      title: "Mindful Presence",
+      color: "bg-stone-50"
+    }
   ]
 
   return (
@@ -57,12 +73,14 @@ export default function AufgussSimple() {
       {/* Aufguss Benefits Section */}
       <section className="bathhouse-section bg-bathhouse-cream">
         <div className="bathhouse-container">
-          <h2 className="bathhouse-heading text-4xl md:text-5xl text-center mb-12 text-bathhouse-black">Aufguss Benefits</h2>
-          <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+          <h2 className="bathhouse-heading text-4xl md:text-5xl text-center mb-12 text-bathhouse-black">Benefits</h2>
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-5xl mx-auto">
             {benefits.map((benefit, index) => (
-              <div key={index} className="flex items-start">
-                <div className="w-2 h-2 bg-bathhouse-teal rounded-full mt-2 mr-4 flex-shrink-0" />
-                <p className="text-lg text-bathhouse-slate">{benefit}</p>
+              <div key={index} className="text-center">
+                <div className={`${benefit.color} w-20 h-20 rounded-lg flex items-center justify-center mx-auto mb-4`}>
+                  {benefit.icon}
+                </div>
+                <h3 className="bathhouse-subheading text-lg font-medium text-bathhouse-black">{benefit.title}</h3>
               </div>
             ))}
           </div>

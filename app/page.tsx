@@ -18,6 +18,9 @@ export default async function HomePage() {
         videoUrl={videoUrl} 
         posterImage={posterImage}
         title="Bathhouse Rituals"
+        subtitle=""
+        ctaText=""
+        ctaLink=""
       />
       
       {/* What Is Aufguss Section */}
