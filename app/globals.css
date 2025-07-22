@@ -1,0 +1,213 @@
+/* Custom Font Definitions */
+@font-face {
+  font-family: 'Bagoss Standard';
+  src: url('/fonts/BagossStandard-TRIAL-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Bagoss Standard';
+  src: url('/fonts/BagossStandard-TRIAL-Thin.woff2') format('woff2');
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Bathhouse Studio Brand Colors - Official Pantone Colors */
+  --bathhouse-black: #000000; /* BLACK - CMYK: 0,0,0,100 */
+  --bathhouse-cream: #f2ebde; /* CREAM - Pantone 9224 C - CMYK: 6,7,15,0 */
+  --bathhouse-slate: #5a6870; /* SLATE - Pantone 431 C - CMYK: 63,45,34,25 */
+  --bathhouse-stone: #cebdaa; /* STONE - Pantone 4735 C - CMYK: 17,31,33,4 */
+  --bathhouse-green: #598c82; /* GREEN - Pantone 7475 C - CMYK: 70,25,36,21 */
+  --bathhouse-pink: #b59597; /* PINK - Pantone 500 C - CMYK: 12,50,21,5 */
+  --bathhouse-white: #ffffff; /* WHITE - CMYK: 0,0,0,0 */
+  --bathhouse-blue: #78909c; /* BLUE - Pantone 2165 C - CMYK: 59,35,18,10 */
+  --bathhouse-peach: #e2be9c; /* PEACH - Pantone 473 C - CMYK: 0,24,33,0 */
+  
+  /* Semantic aliases */
+  --bathhouse-teal: #598c82; /* Alias for GREEN */
+  --bathhouse-rose: #b59597; /* Alias for PINK */
+  --bathhouse-sage: #78909c; /* Alias for BLUE */
+  --bathhouse-warm: #e2be9c; /* Alias for PEACH */
+  --bathhouse-sand: #cebdaa; /* Alias for STONE */
+}
+
+@layer base {
+  body {
+    font-family: var(--font-inter), 'Inter Tight', system-ui, -apple-system, sans-serif;
+    font-feature-settings: "rlig" 1, "calt" 1;
+    font-weight: 300;
+    font-size: 1.125rem; /* 18px base, up from 16px */
+    line-height: 1.75;
+    @apply bg-bathhouse-cream text-bathhouse-slate;
+  }
+
+  h1 {
+    font-family: 'Bagoss Standard', var(--font-outfit), system-ui, sans-serif;
+    font-weight: 400;
+    letter-spacing: -0.025em;
+    font-size: 3rem; /* 48px mobile */
+    line-height: 1.2;
+    @apply text-bathhouse-black;
+  }
+  
+  @media (min-width: 768px) {
+    h1 {
+      font-size: 3.75rem; /* 60px desktop */
+    }
+  }
+
+  h2 {
+    font-family: 'Bagoss Standard', var(--font-outfit), system-ui, sans-serif;
+    font-weight: 400;
+    letter-spacing: -0.025em;
+    font-size: 2.25rem; /* 36px mobile */
+    line-height: 1.3;
+    @apply text-bathhouse-black;
+  }
+  
+  @media (min-width: 768px) {
+    h2 {
+      font-size: 3rem; /* 48px desktop */
+    }
+  }
+
+  h3 {
+    font-family: 'Bagoss Standard', var(--font-outfit), system-ui, sans-serif;
+    font-weight: 400;
+    letter-spacing: -0.025em;
+    font-size: 1.5rem; /* 24px mobile */
+    line-height: 1.4;
+    @apply text-bathhouse-black;
+  }
+  
+  @media (min-width: 768px) {
+    h3 {
+      font-size: 1.875rem; /* 30px desktop */
+    }
+  }
+
+  h4, h5, h6 {
+    font-family: 'Bagoss Standard', var(--font-outfit), system-ui, sans-serif;
+    font-weight: 400;
+    letter-spacing: -0.025em;
+    font-size: 1.25rem; /* 20px */
+    line-height: 1.5;
+    @apply text-bathhouse-black;
+  }
+}
+
+@layer components {
+  /* Responsive text utilities */
+  .text-responsive-sm {
+    font-size: 0.9375rem; /* 15px mobile */
+  }
+  
+  @media (min-width: 768px) {
+    .text-responsive-sm {
+      font-size: 1rem; /* 16px desktop */
+    }
+  }
+  
+  .text-responsive-base {
+    font-size: 1.125rem; /* 18px mobile */
+  }
+  
+  @media (min-width: 768px) {
+    .text-responsive-base {
+      font-size: 1.25rem; /* 20px desktop */
+    }
+  }
+  
+  .text-responsive-lg {
+    font-size: 1.25rem; /* 20px mobile */
+  }
+  
+  @media (min-width: 768px) {
+    .text-responsive-lg {
+      font-size: 1.5rem; /* 24px desktop */
+    }
+  }
+  
+  .text-responsive-xl {
+    font-size: 1.5rem; /* 24px mobile */
+  }
+  
+  @media (min-width: 768px) {
+    .text-responsive-xl {
+      font-size: 1.875rem; /* 30px desktop */
+    }
+  }
+
+  .bathhouse-container {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  .bathhouse-section {
+    @apply py-16 sm:py-20 lg:py-24;
+  }
+
+  .bathhouse-text-balance {
+    text-wrap: balance;
+  }
+
+  .bathhouse-heading {
+    font-family: 'Bagoss Standard', var(--font-outfit), system-ui, sans-serif;
+    font-weight: 400;
+    letter-spacing: -0.025em;
+  }
+  
+  .font-heading {
+    font-family: 'Bagoss Standard', var(--font-outfit), system-ui, sans-serif !important;
+  }
+  
+  .bagoss-thin {
+    font-family: 'Bagoss Standard', var(--font-outfit), system-ui, sans-serif;
+    font-weight: 100;
+  }
+
+  .bathhouse-subheading {
+    font-family: var(--font-inter), 'Inter Tight', system-ui, -apple-system, sans-serif;
+    font-weight: 300;
+    letter-spacing: -0.01em;
+  }
+  
+  .font-sans {
+    font-family: var(--font-inter), 'Inter Tight', system-ui, -apple-system, sans-serif !important;
+  }
+
+  /* Mobile-optimized text truncation */
+  .line-clamp-3 {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+}
+
+@layer utilities {
+  /* Custom scrollbar for mobile category filters */
+  .overflow-x-auto::-webkit-scrollbar {
+    height: 4px;
+  }
+
+  .overflow-x-auto::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  .overflow-x-auto::-webkit-scrollbar-thumb {
+    background: theme(colors.bathhouse-slate);
+    border-radius: 2px;
+  }
+
+  .overflow-x-auto::-webkit-scrollbar-thumb:hover {
+    background: theme(colors.bathhouse-teal);
+  }
+}

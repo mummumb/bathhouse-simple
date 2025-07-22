@@ -1,0 +1,21 @@
+{
+  "name": "Bathhouse Studio",
+  "short_name": "Bathhouse",
+  "description": "Rituals for Modern Life",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#F2EBDE",
+  "theme_color": "#F2EBDE",
+  "icons": [
+    {
+      "src": "/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

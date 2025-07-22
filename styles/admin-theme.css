@@ -1,0 +1,521 @@
+/* Bathhouse Studio Admin Theme
+   A sophisticated, spa-inspired admin theme with earthy tones */
+
+:root {
+  --color-black: #000000;
+  --color-white: #FFFFFF;
+  --color-cream: #F2EBDE;
+  --color-slate: #5A6870;
+  --color-stone: #CEBDAA;
+  --color-teal: #598C82;
+  --color-rose: #B59597;
+  --color-sage: #78909C;
+  --color-peach: #E2BE9C;
+  
+  --font-sans: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  --font-serif: 'Playfair Display', Georgia, Cambria, 'Times New Roman', Times, serif;
+  
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --shadow-md: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  --shadow-lg: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+/* Base Styles */
+body {
+  background-color: var(--color-cream);
+  color: var(--color-slate);
+  font-family: var(--font-sans);
+  line-height: 1.5;
+}
+
+/* Admin Layout */
+.admin-layout {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header */
+.admin-header {
+  background-color: var(--color-black);
+  color: var(--color-white);
+  padding: 1rem 2rem;
+  box-shadow: var(--shadow);
+  position: sticky;
+  top: 0;
+  z-index: 50;
+}
+
+.admin-header h1 {
+  font-family: var(--font-serif);
+  font-weight: 300;
+  letter-spacing: -0.025em;
+  margin: 0;
+}
+
+/* Navigation */
+.admin-nav {
+  background-color: var(--color-white);
+  border-bottom: 1px solid var(--color-stone);
+  padding: 0;
+}
+
+.admin-nav ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0 2rem;
+  overflow-x: auto;
+}
+
+.admin-nav li {
+  margin-right: 0.25rem;
+}
+
+.admin-nav a {
+  display: block;
+  padding: 1rem 1.5rem;
+  color: var(--color-slate);
+  text-decoration: none;
+  font-weight: 500;
+  border-bottom: 3px solid transparent;
+  transition: all 0.2s ease;
+}
+
+.admin-nav a:hover {
+  color: var(--color-teal);
+}
+
+.admin-nav a.active {
+  color: var(--color-teal);
+  border-bottom-color: var(--color-teal);
+}
+
+/* Main Content */
+.admin-container {
+  flex: 1;
+  padding: 2rem;
+  max-width: 1400px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+/* Dashboard Cards */
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.dashboard-card {
+  background-color: var(--color-white);
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+  box-shadow: var(--shadow);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  border-top: 4px solid var(--color-teal);
+}
+
+.dashboard-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md);
+}
+
+.dashboard-card h3 {
+  font-family: var(--font-serif);
+  color: var(--color-slate);
+  font-size: 1rem;
+  font-weight: 400;
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+}
+
+.dashboard-card .value {
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: var(--color-black);
+}
+
+/* Activity Feed */
+.activity-feed {
+  background-color: var(--color-white);
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+  box-shadow: var(--shadow);
+}
+
+.activity-feed h2 {
+  font-family: var(--font-serif);
+  font-weight: 300;
+  color: var(--color-black);
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+  font-size: 1.75rem;
+}
+
+.activity-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+  border-bottom: 1px solid var(--color-cream);
+}
+
+.activity-item:last-child {
+  border-bottom: none;
+}
+
+.activity-type {
+  display: inline-block;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  margin-right: 0.75rem;
+}
+
+.activity-type.event {
+  background-color: var(--color-teal);
+  color: white;
+}
+
+.activity-type.journal {
+  background-color: var(--color-rose);
+  color: white;
+}
+
+.activity-type.ritual {
+  background-color: var(--color-sage);
+  color: white;
+}
+
+.activity-content {
+  font-weight: 500;
+}
+
+.activity-date {
+  color: var(--color-slate);
+  font-size: 0.875rem;
+}
+
+/* Buttons */
+.btn {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 0.25rem;
+  font-weight: 500;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.btn-primary {
+  background-color: var(--color-teal);
+  color: var(--color-white);
+}
+
+.btn-primary:hover {
+  background-color: #4a7a70;
+}
+
+.btn-secondary {
+  background-color: var(--color-cream);
+  color: var(--color-slate);
+}
+
+.btn-secondary:hover {
+  background-color: #e5dfd2;
+}
+
+.btn-danger {
+  background-color: #e53e3e;
+  color: var(--color-white);
+}
+
+.btn-danger:hover {
+  background-color: #c53030;
+}
+
+.btn-sm {
+  padding: 0.5rem 1rem;
+  font-size: 0.875rem;
+}
+
+/* Book Now Button */
+.book-now-button {
+  background-color: var(--color-teal);
+  color: var(--color-white);
+  border: none;
+  border-radius: 0.25rem;
+  padding: 0.5rem 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.book-now-button:hover {
+  background-color: #4a7a70;
+}
+
+/* Logout Button */
+.logout-button {
+  background-color: transparent;
+  color: var(--color-white);
+  border: 1px solid var(--color-white);
+  border-radius: 0.25rem;
+  padding: 0.5rem 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.logout-button:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Forms */
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  color: var(--color-black);
+}
+
+.form-input,
+.form-textarea,
+.form-select {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid var(--color-stone);
+  border-radius: 0.25rem;
+  background-color: var(--color-white);
+  color: var(--color-black);
+  transition: border-color 0.2s ease;
+}
+
+.form-input:focus,
+.form-textarea:focus,
+.form-select:focus {
+  outline: none;
+  border-color: var(--color-teal);
+  box-shadow: 0 0 0 3px rgba(89, 140, 130, 0.2);
+}
+
+.form-textarea {
+  min-height: 150px;
+  resize: vertical;
+}
+
+/* Tables */
+.admin-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  background-color: var(--color-white);
+  border-radius: 0.5rem;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+}
+
+.admin-table th {
+  background-color: var(--color-cream);
+  color: var(--color-slate);
+  font-weight: 500;
+  text-align: left;
+  padding: 1rem;
+  border-bottom: 1px solid var(--color-stone);
+}
+
+.admin-table td {
+  padding: 1rem;
+  border-bottom: 1px solid var(--color-cream);
+}
+
+.admin-table tr:last-child td {
+  border-bottom: none;
+}
+
+.admin-table tr:hover td {
+  background-color: rgba(242, 235, 222, 0.3);
+}
+
+/* Status Indicators */
+.status-indicator {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.25rem 0.5rem;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+.status-indicator::before {
+  content: "";
+  display: block;
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 9999px;
+  margin-right: 0.5rem;
+}
+
+.status-published {
+  background-color: rgba(89, 140, 130, 0.1);
+  color: var(--color-teal);
+}
+
+.status-published::before {
+  background-color: var(--color-teal);
+}
+
+.status-draft {
+  background-color: rgba(90, 104, 112, 0.1);
+  color: var(--color-slate);
+}
+
+.status-draft::before {
+  background-color: var(--color-slate);
+}
+
+/* Publish Button */
+.publish-button {
+  background-color: var(--color-teal);
+  color: var(--color-white);
+  border: none;
+  border-radius: 0.25rem;
+  padding: 0.5rem 1rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.publish-button:hover {
+  background-color: #4a7a70;
+}
+
+.unpublish-button {
+  background-color: var(--color-cream);
+  color: var(--color-slate);
+  border: none;
+  border-radius: 0.25rem;
+  padding: 0.5rem 1rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.unpublish-button:hover {
+  background-color: #e5dfd2;
+}
+
+/* Page Header */
+.page-header {
+  margin-bottom: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.page-header h1 {
+  font-family: var(--font-serif);
+  font-weight: 300;
+  color: var(--color-black);
+  margin: 0;
+  font-size: 2rem;
+}
+
+/* Tabs */
+.tabs {
+  display: flex;
+  border-bottom: 1px solid var(--color-stone);
+  margin-bottom: 2rem;
+}
+
+.tab {
+  padding: 0.75rem 1.5rem;
+  background: none;
+  border: none;
+  border-bottom: 3px solid transparent;
+  font-family: var(--font-sans);
+  font-weight: 500;
+  color: var(--color-slate);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.tab:hover {
+  color: var(--color-teal);
+}
+
+.tab.active {
+  color: var(--color-teal);
+  border-bottom-color: var(--color-teal);
+}
+
+/* Cards */
+.card {
+  background-color: var(--color-white);
+  border-radius: 0.5rem;
+  box-shadow: var(--shadow);
+  overflow: hidden;
+}
+
+.card-header {
+  padding: 1.5rem;
+  border-bottom: 1px solid var(--color-cream);
+}
+
+.card-header h2 {
+  font-family: var(--font-serif);
+  font-weight: 300;
+  color: var(--color-black);
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+.card-body {
+  padding: 1.5rem;
+}
+
+.card-footer {
+  padding: 1.5rem;
+  border-top: 1px solid var(--color-cream);
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.75rem;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .admin-container {
+    padding: 1rem;
+  }
+  
+  .dashboard-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .admin-nav ul {
+    padding: 0 1rem;
+    overflow-x: auto;
+  }
+  
+  .admin-nav a {
+    padding: 0.75rem 1rem;
+  }
+  
+  .page-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+}

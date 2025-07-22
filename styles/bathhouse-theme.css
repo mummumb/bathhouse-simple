@@ -1,0 +1,784 @@
+/* Bathhouse Studio - Refined Spa & Wellness Theme
+   A sophisticated, minimalist design with earthy tones and elegant typography */
+
+/* Base Styles */
+:root {
+  /* Brand Colors */
+  --color-black: #000000;
+  --color-white: #FFFFFF;
+  --color-cream: #F2EBDE;
+  --color-slate: #5A6870;
+  --color-stone: #CEBDAA;
+  --color-teal: #598C82;
+  --color-rose: #B59597;
+  --color-sage: #78909C;
+  --color-peach: #E2BE9C;
+  
+  /* Typography */
+  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-serif: 'Playfair Display', Georgia, serif;
+  
+  /* Spacing */
+  --spacing-xs: 0.5rem;
+  --spacing-sm: 1rem;
+  --spacing-md: 1.5rem;
+  --spacing-lg: 2rem;
+  --spacing-xl: 3rem;
+  --spacing-xxl: 5rem;
+  
+  /* Shadows */
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.05);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.05);
+}
+
+/* Utility Classes */
+.bathhouse-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.bathhouse-black {
+  color: var(--color-black);
+}
+
+.bathhouse-teal {
+  color: var(--color-teal);
+}
+
+.bathhouse-slate {
+  color: var(--color-slate);
+}
+
+.bg-bathhouse-teal {
+  background-color: var(--color-teal);
+}
+
+.bg-bathhouse-slate {
+  background-color: var(--color-slate);
+}
+
+.border-bathhouse-teal {
+  border-color: var(--color-teal);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.3s ease-out forwards;
+}
+
+.animate-slideUp {
+  animation: slideUp 0.5s ease-out forwards;
+}
+
+/* Section Components */
+.bathhouse-section {
+  padding: 3rem 0;
+}
+
+@media (min-width: 768px) {
+  .bathhouse-section {
+    padding: 6rem 0;
+  }
+}
+
+.bathhouse-heading {
+  font-family: var(--font-serif);
+  color: var(--color-black);
+  font-weight: 300;
+  line-height: 1.2;
+}
+
+.bathhouse-subheading {
+  color: var(--color-slate);
+  line-height: 1.75;
+}
+
+.bathhouse-text-balance {
+  text-wrap: balance;
+}
+
+/* Card Components */
+.bathhouse-card {
+  background: white;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  transition: box-shadow 0.3s ease;
+}
+
+.bathhouse-card:hover {
+  box-shadow: var(--shadow-md);
+}
+
+.bathhouse-card-image {
+  position: relative;
+  overflow: hidden;
+}
+
+.bathhouse-card-content {
+  padding: 1.5rem;
+}
+
+/* Button Components */
+.bathhouse-btn-primary {
+  background-color: var(--color-teal);
+  color: white;
+  padding: 0.5rem 1.5rem;
+  border-radius: 0.375rem;
+  transition: all 0.3s ease;
+}
+
+.bathhouse-btn-primary:hover {
+  background-color: var(--color-slate);
+}
+
+.bathhouse-btn-secondary {
+  border: 1px solid var(--color-teal);
+  color: var(--color-teal);
+  background: transparent;
+  padding: 0.375rem 1rem;
+  border-radius: 0.375rem;
+  transition: all 0.3s ease;
+}
+
+.bathhouse-btn-secondary:hover {
+  background-color: var(--color-teal);
+  color: white;
+}
+
+/* Utility Classes */
+.line-clamp-3 {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* Global Resets & Base Styles */
+/* Body styles now in globals.css */
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-serif);
+  color: var(--color-black);
+  font-weight: 300;
+  line-height: 1.2;
+  letter-spacing: -0.025em;
+  margin-top: 0;
+}
+
+h1 {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  margin-bottom: var(--spacing-lg);
+}
+
+h2 {
+  font-size: clamp(2rem, 4vw, 3rem);
+  margin-bottom: var(--spacing-md);
+}
+
+h3 {
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  margin-bottom: var(--spacing-sm);
+}
+
+p {
+  margin-bottom: var(--spacing-md);
+}
+
+a {
+  color: var(--color-teal);
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+a:hover {
+  color: var(--color-black);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Layout Components */
+.container {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 var(--spacing-md);
+}
+
+.section {
+  padding: var(--spacing-xl) 0;
+}
+
+.section-lg {
+  padding: var(--spacing-xxl) 0;
+}
+
+/* Header & Navigation */
+.site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  background-color: transparent;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  padding: var(--spacing-sm) 0;
+}
+
+.site-header.scrolled {
+  background-color: var(--color-cream);
+  box-shadow: var(--shadow-sm);
+}
+
+.site-header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.site-logo {
+  font-family: var(--font-serif);
+  font-size: 1.5rem;
+  color: var(--color-black);
+  text-decoration: none;
+}
+
+.site-logo img {
+  height: 40px;
+  width: auto;
+}
+
+.main-nav ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: var(--spacing-md);
+}
+
+.main-nav a {
+  color: var(--color-black);
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.9rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  padding: 0.5rem 0;
+  position: relative;
+}
+
+.main-nav a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background-color: var(--color-black);
+  transition: width 0.3s ease;
+}
+
+.main-nav a:hover::after,
+.main-nav a.active::after {
+  width: 100%;
+}
+
+/* Mobile Navigation */
+.mobile-nav-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: var(--color-black);
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .mobile-nav-toggle {
+    display: block;
+  }
+  
+  .main-nav {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 80%;
+    max-width: 300px;
+    background-color: var(--color-white);
+    padding: var(--spacing-xl) var(--spacing-md);
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
+    z-index: 200;
+    box-shadow: var(--shadow-lg);
+  }
+  
+  .main-nav.open {
+    transform: translateX(0);
+  }
+  
+  .main-nav ul {
+    flex-direction: column;
+    gap: var(--spacing-md);
+  }
+  
+  .main-nav a {
+    font-size: 1.2rem;
+  }
+}
+
+/* Hero Section */
+.hero {
+  height: 90vh;
+  min-height: 600px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  margin-top: 0;
+  padding-top: 80px; /* Account for fixed header */
+}
+
+.hero-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background-size: cover;
+  background-position: center;
+}
+
+.hero-bg::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.hero-content {
+  max-width: 700px;
+  color: var(--color-white);
+  position: relative;
+  z-index: 1;
+}
+
+.hero-content h1 {
+  color: var(--color-white);
+  margin-bottom: var(--spacing-md);
+}
+
+.hero-content p {
+  font-size: 1.25rem;
+  margin-bottom: var(--spacing-lg);
+}
+
+/* Buttons */
+.btn {
+  display: inline-block;
+  padding: 0.75rem 2rem;
+  border: none;
+  border-radius: 0;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-align: center;
+}
+
+.btn-primary {
+  background-color: var(--color-teal);
+  color: var(--color-white);
+}
+
+.btn-primary:hover {
+  background-color: var(--color-black);
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: var(--color-white);
+  border: 1px solid var(--color-white);
+}
+
+.btn-secondary:hover {
+  background-color: var(--color-white);
+  color: var(--color-black);
+}
+
+.btn-dark {
+  background-color: var(--color-black);
+  color: var(--color-white);
+}
+
+.btn-dark:hover {
+  background-color: var(--color-slate);
+}
+
+/* Feature Sections */
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: var(--spacing-lg);
+}
+
+.feature-card {
+  background-color: var(--color-white);
+  padding: var(--spacing-lg);
+  border-radius: 0;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-md);
+}
+
+.feature-icon {
+  font-size: 2rem;
+  color: var(--color-teal);
+  margin-bottom: var(--spacing-sm);
+}
+
+.feature-title {
+  margin-bottom: var(--spacing-sm);
+}
+
+/* Ritual Cards */
+.ritual-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: var(--spacing-lg);
+}
+
+.ritual-card {
+  background-color: var(--color-white);
+  overflow: hidden;
+  position: relative;
+  height: 450px;
+}
+
+.ritual-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.ritual-card:hover .ritual-image {
+  transform: scale(1.05);
+}
+
+.ritual-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: var(--spacing-md);
+  background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+  color: var(--color-white);
+  transition: opacity 0.3s ease;
+}
+
+.ritual-title {
+  color: var(--color-white);
+  margin-bottom: var(--spacing-xs);
+}
+
+.ritual-subtitle {
+  font-size: 0.9rem;
+  opacity: 0.8;
+  margin-bottom: var(--spacing-sm);
+}
+
+/* Testimonials */
+.testimonial-section {
+  background-color: var(--color-white);
+  padding: var(--spacing-xxl) 0;
+}
+
+.testimonial-slider {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.testimonial-quote {
+  font-family: var(--font-serif);
+  font-size: 1.5rem;
+  font-style: italic;
+  color: var(--color-black);
+  margin-bottom: var(--spacing-md);
+}
+
+.testimonial-author {
+  font-weight: 500;
+  color: var(--color-slate);
+}
+
+/* Journal/Blog */
+.journal-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: var(--spacing-lg);
+}
+
+.journal-card {
+  background-color: var(--color-white);
+  overflow: hidden;
+}
+
+.journal-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.journal-content {
+  padding: var(--spacing-md);
+}
+
+.journal-date {
+  font-size: 0.8rem;
+  color: var(--color-slate);
+  margin-bottom: var(--spacing-xs);
+}
+
+.journal-title {
+  margin-bottom: var(--spacing-xs);
+}
+
+.journal-excerpt {
+  font-size: 0.9rem;
+  margin-bottom: var(--spacing-sm);
+}
+
+/* Footer */
+.site-footer {
+  background-color: var(--color-black);
+  color: var(--color-white);
+  padding: var(--spacing-xl) 0;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: var(--spacing-lg);
+}
+
+.footer-logo {
+  font-family: var(--font-serif);
+  font-size: 1.5rem;
+  color: var(--color-white);
+  margin-bottom: var(--spacing-md);
+}
+
+.footer-heading {
+  color: var(--color-white);
+  font-size: 1.2rem;
+  margin-bottom: var(--spacing-md);
+}
+
+.footer-nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-nav li {
+  margin-bottom: var(--spacing-xs);
+}
+
+.footer-nav a {
+  color: var(--color-stone);
+  transition: color 0.2s ease;
+}
+
+.footer-nav a:hover {
+  color: var(--color-white);
+}
+
+.social-links {
+  display: flex;
+  gap: var(--spacing-sm);
+}
+
+.social-link {
+  color: var(--color-white);
+  font-size: 1.2rem;
+}
+
+.copyright {
+  margin-top: var(--spacing-xl);
+  padding-top: var(--spacing-md);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  text-align: center;
+  font-size: 0.8rem;
+  color: var(--color-stone);
+}
+
+/* Utility Classes */
+.text-center {
+  text-align: center;
+}
+
+.mb-sm {
+  margin-bottom: var(--spacing-sm);
+}
+
+.mb-md {
+  margin-bottom: var(--spacing-md);
+}
+
+.mb-lg {
+  margin-bottom: var(--spacing-lg);
+}
+
+.mb-xl {
+  margin-bottom: var(--spacing-xl);
+}
+
+.mt-sm {
+  margin-top: var(--spacing-sm);
+}
+
+.mt-md {
+  margin-top: var(--spacing-md);
+}
+
+.mt-lg {
+  margin-top: var(--spacing-lg);
+}
+
+.mt-xl {
+  margin-top: var(--spacing-xl);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { transform: translateY(20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+.animate-fade-in {
+  animation: fadeIn 1s ease forwards;
+}
+
+.animate-slide-up {
+  animation: slideUp 0.8s ease forwards;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 992px) {
+  .section, .section-lg {
+    padding: var(--spacing-lg) 0;
+  }
+  
+  .hero {
+    height: 70vh;
+  }
+}
+
+@media (max-width: 768px) {
+  .ritual-grid, .feature-grid, .journal-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .hero-content {
+    text-align: center;
+  }
+}
+
+/* Custom Page Styles */
+.ritual-detail {
+  padding-top: 120px;
+}
+
+.ritual-hero {
+  height: 60vh;
+  min-height: 400px;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+}
+
+.ritual-hero-content {
+  background-color: var(--color-white);
+  padding: var(--spacing-lg);
+  margin: var(--spacing-lg);
+  max-width: 600px;
+  position: relative;
+  bottom: -50px;
+}
+
+.ritual-details {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: var(--spacing-lg);
+  margin-top: 100px;
+}
+
+.ritual-sidebar {
+  background-color: var(--color-cream);
+  padding: var(--spacing-md);
+}
+
+.ritual-info-item {
+  margin-bottom: var(--spacing-md);
+}
+
+.ritual-info-label {
+  font-weight: 500;
+  color: var(--color-black);
+  margin-bottom: var(--spacing-xs);
+}
+
+@media (max-width: 768px) {
+  .ritual-details {
+    grid-template-columns: 1fr;
+  }
+  
+  .ritual-hero-content {
+    margin: var(--spacing-md);
+    bottom: -30px;
+  }
+}

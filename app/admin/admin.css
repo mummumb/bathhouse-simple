@@ -1,0 +1,281 @@
+/* Reset styles that might be inherited from globals.css for the admin panel */
+.admin-panel {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol";
+  font-size: 1rem;
+  line-height: 1.5;
+  background-color: #f9fafb; /* equivalent to Tailwind's gray-50 */
+  color: #111827; /* equivalent to Tailwind's gray-900 */
+  min-height: 100vh;
+}
+
+.admin-panel h1,
+.admin-panel h2,
+.admin-panel h3,
+.admin-panel h4,
+.admin-panel h5,
+.admin-panel h6 {
+  font-family: inherit;
+  font-weight: 600;
+  color: inherit;
+  margin: 0;
+  padding: 0;
+  font-size: revert;
+}
+
+.admin-panel p {
+  margin: 0;
+}
+
+/* This ensures the WYSIWYG editor content is not affected by global styles */
+.admin-panel .ProseMirror {
+  font-family: inherit;
+  font-size: 1rem;
+  line-height: 1.5;
+  min-height: 150px;
+  border: 1px solid #d1d5db; /* gray-300 */
+  border-radius: 0.375rem; /* rounded-md */
+  padding: 0.5rem 0.75rem;
+  background-color: #ffffff;
+}
+
+.admin-panel .ProseMirror p {
+  margin: 0 0 1rem 0;
+}
+
+.admin-panel .ProseMirror:focus {
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+  border-color: #3b82f6; /* blue-500 */
+  box-shadow: 0 0 0 1px #3b82f6;
+}
+
+/* Add any admin-specific CSS here */
+.admin-dashboard {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.admin-main-content {
+  flex-grow: 1;
+  padding: 1rem;
+}
+
+.admin-header {
+  background-color: #f8f8f8;
+  padding: 1rem;
+  border-bottom: 1px solid #eee;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.admin-nav {
+  background-color: #f0f0f0;
+  padding: 1rem;
+  border-right: 1px solid #eee;
+}
+
+.admin-nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+.admin-nav li {
+  margin-bottom: 0.5rem;
+}
+
+.admin-nav a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+}
+
+.admin-nav a:hover {
+  color: #007bff;
+}
+
+.admin-form-section {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 2rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.admin-form-section h2 {
+  margin-bottom: 1.5rem;
+  color: #333;
+  text-align: center;
+}
+
+.admin-form-section .form-group {
+  margin-bottom: 1rem;
+}
+
+.admin-form-section label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+  color: #555;
+}
+
+.admin-form-section input[type="text"],
+.admin-form-section input[type="email"],
+.admin-form-section input[type="password"],
+.admin-form-section input[type="number"],
+.admin-form-section input[type="date"],
+.admin-form-section input[type="time"],
+.admin-form-section textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.admin-form-section textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.admin-form-section button {
+  display: block;
+  width: 100%;
+  padding: 0.75rem;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.admin-form-section button:hover {
+  background-color: #0056b3;
+}
+
+.admin-form-section .error-message {
+  color: red;
+  margin-top: 1rem;
+  text-align: center;
+}
+
+.admin-list-section {
+  max-width: 1000px;
+  margin: 2rem auto;
+  padding: 2rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.admin-list-section h2 {
+  margin-bottom: 1.5rem;
+  color: #333;
+  text-align: center;
+}
+
+.admin-list-section table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+}
+
+.admin-list-section th,
+.admin-list-section td {
+  border: 1px solid #eee;
+  padding: 0.75rem;
+  text-align: left;
+}
+
+.admin-list-section th {
+  background-color: #f2f2f2;
+  font-weight: bold;
+}
+
+.admin-list-section .actions-column {
+  white-space: nowrap;
+}
+
+.admin-list-section .action-button {
+  margin-right: 0.5rem;
+  padding: 0.4rem 0.8rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.admin-list-section .edit-button {
+  background-color: #ffc107;
+  color: #333;
+  border: none;
+}
+
+.admin-list-section .delete-button {
+  background-color: #dc3545;
+  color: white;
+  border: none;
+}
+
+.admin-list-section .add-new-button {
+  display: inline-block;
+  margin-bottom: 1rem;
+  padding: 0.6rem 1.2rem;
+  background-color: #28a745;
+  color: white;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.admin-list-section .add-new-button:hover {
+  background-color: #218838;
+}
+
+/* WYSIWYG Editor specific styles */
+.wysiwyg-editor-container {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  min-height: 200px;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.wysiwyg-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  padding: 0.5rem;
+  border-bottom: 1px solid #eee;
+  margin-bottom: 0.5rem;
+}
+
+.wysiwyg-toolbar button {
+  background-color: #e9ecef;
+  border: 1px solid #ced4da;
+  padding: 0.3rem 0.6rem;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 0.85rem;
+}
+
+.wysiwyg-toolbar button:hover {
+  background-color: #dee2e6;
+}
+
+.wysiwyg-content {
+  min-height: 150px;
+  padding: 0.5rem;
+  outline: none;
+}
+
+.wysiwyg-content:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
