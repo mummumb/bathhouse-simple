@@ -47,15 +47,18 @@ export default async function HomePage() {
             </div>
             <div className="order-1 lg:order-2 text-center lg:text-left">
               <h2 className="bathhouse-heading text-4xl md:text-5xl mb-4 text-bathhouse-black">Meet the Sauna Master</h2>
-              <h3 className="bathhouse-heading text-2xl md:text-3xl mb-8 text-bathhouse-black">Amanda</h3>
-              <blockquote className="relative">
-                <span className="text-6xl text-bathhouse-teal/20 absolute -top-4 -left-2 leading-none">"</span>
-                <p className="text-xl md:text-2xl italic text-bathhouse-slate relative z-10">
-                  A sauna master does with their rituals as a sommelier does with their wine.
+              <h3 className="bathhouse-heading text-2xl md:text-3xl mb-6 text-bathhouse-black">Amanda</h3>
+              <div className="space-y-4 text-bathhouse-slate">
+                <p className="text-lg leading-relaxed">
+                  With nearly two decades of experience in movement, health and human connection, Amanda has supported hundreds of people on their personal wellness journeys. As a wife and mother of two, she stays true to her belief that balance is the key to lasting success, a mindset that led her to shift her focus from fitness toward more restorative practices.
                 </p>
-                <span className="text-6xl text-bathhouse-teal/20 absolute -bottom-8 right-0 leading-none">"</span>
-              </blockquote>
-              <p className="mt-4 text-lg text-bathhouse-slate">— Amanda Berger</p>
+                <p className="text-lg leading-relaxed">
+                  An Aufguss (Sauna) Master, Personal Trainer, Pilates Instructor, Breathwork Facilitator & Sound Healer, Amanda brings deep knowledge and grounded intuition to every session. Her Bathhouse Rituals are an invitation to slow down, reconnect, and feel totally relaxed.
+                </p>
+                <p className="text-lg leading-relaxed">
+                  As the global sauna movement gains momentum, Amanda is helping bring this powerful, Aufguss sensory experience to Melbourne, one ritual at a time.
+                </p>
+              </div>
             </div>
           </div>
         </div>
@@ -76,32 +79,22 @@ export default async function HomePage() {
           </p>
           <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
             <div className="bg-white p-8 rounded-lg shadow-sm border border-bathhouse-stone/20">
-              <p className="text-sm text-bathhouse-slate/70 mb-2">August 15, 2025</p>
-              <p className="text-sm text-bathhouse-slate mb-4">Melbourne, VIC</p>
-              <h3 className="bathhouse-heading text-2xl mb-4 text-bathhouse-black">Aufguss, A Sauna Ritual</h3>
-              <p className="text-bathhouse-slate mb-6">An immersive, multi-sensory experience guided by a Sauna Master to the rhythm of music, heat, and aromatherapy.</p>
-              <div className="space-y-3">
-                <a href="/book" className="block w-full text-center bg-bathhouse-black text-bathhouse-white px-6 py-3 rounded-md hover:bg-bathhouse-slate transition-colors font-normal">
-                  Find Out More
-                </a>
-                <a href="/book" className="block w-full text-center border border-bathhouse-black text-bathhouse-black px-6 py-3 rounded-md hover:bg-bathhouse-stone/10 transition-colors font-normal">
-                  Register Interest
-                </a>
-              </div>
+              <p className="text-sm text-bathhouse-slate/70 mb-2">September 14, 2025</p>
+              <p className="text-sm text-bathhouse-slate mb-4">Melbourne</p>
+              <h3 className="bathhouse-heading text-2xl mb-4 text-bathhouse-black">Aufguss Sauna Ritual</h3>
+              <p className="text-bathhouse-slate mb-6">Join us for a powerful 90-minute journey with Aufguss Master Amanda for a transformative ritual combining breathwork, three rounds of traditional Aufguss, and cold plunges between each heat cycle. The experience ends with a hot plunge, herbal tea and nourishing snacks, leaving you grounded, clear and deeply restored.</p>
+              <a href="/book" className="block w-full text-center border border-bathhouse-black text-bathhouse-black px-6 py-3 rounded-md hover:bg-bathhouse-stone/10 transition-colors font-normal">
+                Register Interest
+              </a>
             </div>
             <div className="bg-white p-8 rounded-lg shadow-sm border border-bathhouse-stone/20">
-              <p className="text-sm text-bathhouse-slate/70 mb-2">September 5, 2025</p>
-              <p className="text-sm text-bathhouse-slate mb-4">Sydney, NSW</p>
-              <h3 className="bathhouse-heading text-2xl mb-4 text-bathhouse-black">Cold Water Immersion</h3>
-              <p className="text-bathhouse-slate mb-6">Build resilience and unlock your potential with guided cold plunge sessions. Learn techniques to control your breath and mind in the face of stress.</p>
-              <div className="space-y-3">
-                <a href="/book" className="block w-full text-center bg-bathhouse-black text-bathhouse-white px-6 py-3 rounded-md hover:bg-bathhouse-slate transition-colors font-normal">
-                  Find Out More
-                </a>
-                <a href="/book" className="block w-full text-center border border-bathhouse-black text-bathhouse-black px-6 py-3 rounded-md hover:bg-bathhouse-stone/10 transition-colors font-normal">
-                  Register Interest
-                </a>
-              </div>
+              <p className="text-sm text-bathhouse-slate/70 mb-2">November 16, 2025</p>
+              <p className="text-sm text-bathhouse-slate mb-4">Melbourne</p>
+              <h3 className="bathhouse-heading text-2xl mb-4 text-bathhouse-black">Sound, Sauna & Ice Ritual</h3>
+              <p className="text-bathhouse-slate mb-6">Drop into deep presence with this immersive 90-minute journey. Begin with a grounding sauna session, followed by a refreshing ice plunge to awaken the body. Then surrender into restorative sound healing, where bowls and vibration guide you into stillness. Leave feeling balanced, clear, and deeply reset.</p>
+              <a href="/book" className="block w-full text-center border border-bathhouse-black text-bathhouse-black px-6 py-3 rounded-md hover:bg-bathhouse-stone/10 transition-colors font-normal">
+                Register Interest
+              </a>
             </div>
           </div>
         </div>

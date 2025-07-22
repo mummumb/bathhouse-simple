@@ -121,37 +121,12 @@ export default function HeroVideoSection({
                   </Link>
                 )}
                 
-                {videoUrl && (
-                  <button
-                    onClick={togglePlayPause}
-                    className="flex items-center text-white gap-2 hover:text-white/80 transition-colors mt-2 sm:mt-0"
-                    aria-label={isPlaying ? "Pause video" : "Play video"}
-                  >
-                    {isPlaying ? (
-                      <>
-                        <PauseCircle className="h-6 w-6" />
-                        <span className="text-sm font-medium">Pause</span>
-                      </>
-                    ) : (
-                      <>
-                        <PlayCircle className="h-6 w-6" />
-                        <span className="text-sm font-medium">Play</span>
-                      </>
-                    )}
-                  </button>
-                )}
               </div>
             )}
           </div>
         </div>
       </div>
       
-      {/* Scroll indicator */}
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-10 animate-bounce">
-        <div className="w-8 h-12 rounded-full border-2 border-white/40 flex items-start justify-center">
-          <div className="w-1 h-3 bg-white/60 rounded-full mt-2"></div>
-        </div>
-      </div>
     </section>
   )
 }

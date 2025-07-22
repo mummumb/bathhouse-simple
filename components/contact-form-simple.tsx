@@ -15,17 +15,32 @@ export default function ContactFormSimple() {
     e.preventDefault()
     setIsSubmitting(true)
     
-    // Simulate form submission
-    await new Promise(resolve => setTimeout(resolve, 1000))
-    
-    setSubmitted(true)
-    setIsSubmitting(false)
-    
-    // Reset form after a delay
-    setTimeout(() => {
-      setFormData({ name: "", email: "", message: "" })
-      setSubmitted(false)
-    }, 3000)
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          ...formData,
+          to: 'amanda@bathhousestudio.com.au'
+        }),
+      })
+      
+      if (response.ok) {
+        setSubmitted(true)
+        setTimeout(() => {
+          setFormData({ name: "", email: "", message: "" })
+          setSubmitted(false)
+        }, 3000)
+      } else {
+        alert('There was an error sending your message. Please try again.')
+      }
+    } catch (error) {
+      alert('There was an error sending your message. Please try again.')
+    } finally {
+      setIsSubmitting(false)
+    }
   }
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
