@@ -1,36 +1,39 @@
-import { Droplets, Wind, Leaf, Heart } from "lucide-react"
+import { Droplets, Wind, Music, Waves, Brain } from "lucide-react"
 
 export default function AufgussSimple() {
   const icons = [
     {
-      icon: <Droplets className="w-12 h-12 mx-auto mb-4 text-bathhouse-teal" />,
-      title: "Aromatherapy",
-      description: "Essential oils for deep relaxation"
-    },
-    {
       icon: <Wind className="w-12 h-12 mx-auto mb-4 text-bathhouse-teal" />,
       title: "Steam",
-      description: "Therapeutic heat waves"
+      description: "Carefully controlled heat and humidity"
     },
     {
-      icon: <Leaf className="w-12 h-12 mx-auto mb-4 text-bathhouse-teal" />,
-      title: "Natural Elements",
-      description: "Pure, organic essences"
+      icon: <Droplets className="w-12 h-12 mx-auto mb-4 text-bathhouse-teal" />,
+      title: "Aromatherapy",
+      description: "Essential oils chosen for their therapeutic properties"
     },
     {
-      icon: <Heart className="w-12 h-12 mx-auto mb-4 text-bathhouse-teal" />,
-      title: "Wellness",
-      description: "Holistic mind-body benefits"
+      icon: <Music className="w-12 h-12 mx-auto mb-4 text-bathhouse-teal" />,
+      title: "Curated Music",
+      description: "Soundscapes that guide the journey"
+    },
+    {
+      icon: <Waves className="w-12 h-12 mx-auto mb-4 text-bathhouse-teal" />,
+      title: "Towel Work",
+      description: "Choreographed movements that distribute heat"
+    },
+    {
+      icon: <Brain className="w-12 h-12 mx-auto mb-4 text-bathhouse-teal" />,
+      title: "Mindful Guidance",
+      description: "The presence and expertise of a master"
     }
   ]
 
   const benefits = [
-    "Improved circulation and cardiovascular health",
-    "Deep muscle relaxation and stress relief",
-    "Enhanced respiratory function",
-    "Boosted immune system",
-    "Mental clarity and emotional balance",
-    "Detoxification through sweating"
+    "Deep Detoxification",
+    "Improved Circulation",
+    "Calm & Clarity",
+    "Mindful Presence"
   ]
 
   return (
@@ -39,7 +42,7 @@ export default function AufgussSimple() {
       <section className="bathhouse-section bg-white">
         <div className="bathhouse-container">
           <h2 className="bathhouse-heading text-4xl md:text-5xl text-center mb-12 text-bathhouse-black">The Aufguss Experience</h2>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
+          <div className="grid grid-cols-2 md:grid-cols-5 gap-6 max-w-6xl mx-auto">
             {icons.map((item, index) => (
               <div key={index} className="text-center">
                 {item.icon}

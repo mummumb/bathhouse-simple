@@ -23,10 +23,10 @@ export default async function HomePage() {
       {/* What Is Aufguss Section */}
       <section className="bathhouse-section bg-bathhouse-cream">
         <div className="bathhouse-container">
-          <h2 className="bathhouse-heading text-4xl md:text-5xl text-center mb-8 text-bathhouse-black">What Is Aufguss</h2>
+          <h2 className="bathhouse-heading text-4xl md:text-5xl text-center mb-8 text-bathhouse-black">The Aufguss Ritual</h2>
           <p className="text-lg md:text-xl text-center max-w-3xl mx-auto text-bathhouse-slate leading-relaxed">
-            Aufguss is a traditional sauna ritual that combines aromatherapy, rhythmic towel waving, 
-            and intentional heat distribution to create a transformative wellness experience.
+            A five-step, multi-sensory experience—steam, aromatherapy, curated music, towel work, and the mindful guidance of a master. 
+            Crafted with expertise and creativity, inviting you into an authentic journey of presence and renewal.
           </p>
         </div>
       </section>
@@ -48,10 +48,11 @@ export default async function HomePage() {
               <blockquote className="relative">
                 <span className="text-6xl text-bathhouse-teal/20 absolute -top-4 -left-2 leading-none">"</span>
                 <p className="text-xl md:text-2xl italic text-bathhouse-slate relative z-10">
-                  A Sauna is not just about heat—it's about community, ritual, and the transformative power of intentional wellness.
+                  A sauna master does with their rituals as a sommelier does with their wine.
                 </p>
                 <span className="text-6xl text-bathhouse-teal/20 absolute -bottom-8 right-0 leading-none">"</span>
               </blockquote>
+              <p className="mt-4 text-lg text-bathhouse-slate">— Amanda Berger</p>
             </div>
           </div>
         </div>
@@ -66,29 +67,38 @@ export default async function HomePage() {
       {/* Upcoming Events */}
       <section className="bathhouse-section bg-bathhouse-cream">
         <div className="bathhouse-container">
-          <h2 className="bathhouse-heading text-4xl md:text-5xl text-center mb-12 text-bathhouse-black">Upcoming Events</h2>
-          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-            <div className="bg-white p-8 rounded-lg text-center shadow-sm">
-              <h3 className="bathhouse-heading text-2xl md:text-3xl mb-4 text-bathhouse-black">Aufguss: September</h3>
-              <p className="text-bathhouse-slate mb-4">90 Min Ritual</p>
-              <p className="text-bathhouse-slate/70 mb-6">Location TBC</p>
-              <a 
-                href="/book" 
-                className="inline-block bg-bathhouse-black text-bathhouse-white px-8 py-3 rounded-md hover:bg-bathhouse-slate transition-colors"
-              >
-                Click to Register
-              </a>
+          <h2 className="bathhouse-heading text-4xl md:text-5xl text-center mb-12 text-bathhouse-black">Ritual Events</h2>
+          <p className="text-lg text-center max-w-3xl mx-auto text-bathhouse-slate mb-12">
+            Join us for transformative wellness experiences across Australia and internationally.
+          </p>
+          <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+            <div className="bg-white p-8 rounded-lg shadow-sm">
+              <p className="text-sm text-bathhouse-slate/70 mb-2">August 15, 2025</p>
+              <p className="text-sm text-bathhouse-slate mb-4">Melbourne, VIC</p>
+              <h3 className="bathhouse-heading text-2xl mb-4 text-bathhouse-black">Aufguss, A Sauna Ritual</h3>
+              <p className="text-bathhouse-slate mb-6">An immersive, multi-sensory experience guided by a Sauna Master to the rhythm of music, heat, and aromatherapy.</p>
+              <div className="space-y-3">
+                <a href="/book" className="block w-full text-center bg-bathhouse-black text-bathhouse-white px-6 py-3 rounded-md hover:bg-bathhouse-slate transition-colors">
+                  Find Out More
+                </a>
+                <a href="/book" className="block w-full text-center border border-bathhouse-black text-bathhouse-black px-6 py-3 rounded-md hover:bg-bathhouse-cream transition-colors">
+                  Register Interest
+                </a>
+              </div>
             </div>
-            <div className="bg-white p-8 rounded-lg text-center shadow-sm">
-              <h3 className="bathhouse-heading text-2xl md:text-3xl mb-4 text-bathhouse-black">Bathhouse Ritual: November</h3>
-              <p className="text-bathhouse-slate mb-4">2 hours of Breathwork, Sound Healing, Sauna & Ice</p>
-              <p className="text-bathhouse-slate/70 mb-6">Location TBC</p>
-              <a 
-                href="/book" 
-                className="inline-block bg-bathhouse-black text-bathhouse-white px-8 py-3 rounded-md hover:bg-bathhouse-slate transition-colors"
-              >
-                Click to Register
-              </a>
+            <div className="bg-white p-8 rounded-lg shadow-sm">
+              <p className="text-sm text-bathhouse-slate/70 mb-2">September 5, 2025</p>
+              <p className="text-sm text-bathhouse-slate mb-4">Sydney, NSW</p>
+              <h3 className="bathhouse-heading text-2xl mb-4 text-bathhouse-black">Cold Water Immersion</h3>
+              <p className="text-bathhouse-slate mb-6">Build resilience and unlock your potential with guided cold plunge sessions. Learn techniques to control your breath and mind in the face of stress.</p>
+              <div className="space-y-3">
+                <a href="/book" className="block w-full text-center bg-bathhouse-black text-bathhouse-white px-6 py-3 rounded-md hover:bg-bathhouse-slate transition-colors">
+                  Find Out More
+                </a>
+                <a href="/book" className="block w-full text-center border border-bathhouse-black text-bathhouse-black px-6 py-3 rounded-md hover:bg-bathhouse-cream transition-colors">
+                  Register Interest
+                </a>
+              </div>
             </div>
           </div>
         </div>
