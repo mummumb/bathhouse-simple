@@ -1,22 +1,22 @@
 export default function PreparationSection() {
   const preparations = [
     {
-      icon: "🚿",
+      icon: "/icons/cold-plunge.png",
       title: "Shower before entering",
       description: "Cleanse your body to prepare for the ritual"
     },
     {
-      icon: "👕",
+      icon: "/icons/lounge.png",
       title: "Use a towel",
       description: "Always sit on a clean towel in the sauna"
     },
     {
-      icon: "🦶",
+      icon: "/icons/breathwork.png",
       title: "Bare feet",
       description: "Remove shoes and socks for the authentic experience"
     },
     {
-      icon: "💧",
+      icon: "/icons/hot-plunge.png",
       title: "Hydrate before & after",
       description: "Drink plenty of water to support your body"
     }
@@ -48,8 +48,8 @@ export default function PreparationSection() {
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
           {preparations.map((item, index) => (
             <div key={index} className="bg-bathhouse-stone/20 rounded-lg p-8 text-center">
-              <div className="bg-white rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-4 text-3xl">
-                {item.icon}
+              <div className="bg-white rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-4">
+                <img src={item.icon} alt={item.title} className="w-12 h-12" />
               </div>
               <h3 className="bathhouse-subheading text-lg font-medium mb-3 text-bathhouse-black">
                 {item.title}
