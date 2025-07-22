@@ -36,15 +36,15 @@ export default function AufgussSimple() {
   return (
     <>
       {/* Aufguss Icons Section */}
-      <section className="py-16 md:py-24 bg-gray-50">
-        <div className="container mx-auto px-4">
-          <h2 className="text-3xl md:text-4xl font-light text-center mb-12">The Aufguss Experience</h2>
+      <section className="bathhouse-section bg-white">
+        <div className="bathhouse-container">
+          <h2 className="bathhouse-heading text-4xl md:text-5xl text-center mb-12 text-bathhouse-black">The Aufguss Experience</h2>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
             {icons.map((item, index) => (
               <div key={index} className="text-center">
                 {item.icon}
-                <h3 className="text-lg font-medium mb-2">{item.title}</h3>
-                <p className="text-sm text-gray-600">{item.description}</p>
+                <h3 className="bathhouse-subheading text-lg font-medium mb-2 text-bathhouse-black">{item.title}</h3>
+                <p className="text-sm text-bathhouse-slate">{item.description}</p>
               </div>
             ))}
           </div>
@@ -52,14 +52,14 @@ export default function AufgussSimple() {
       </section>
 
       {/* Aufguss Benefits Section */}
-      <section className="py-16 md:py-24 bg-white">
-        <div className="container mx-auto px-4">
-          <h2 className="text-3xl md:text-4xl font-light text-center mb-12">Aufguss Benefits</h2>
+      <section className="bathhouse-section bg-bathhouse-cream">
+        <div className="bathhouse-container">
+          <h2 className="bathhouse-heading text-4xl md:text-5xl text-center mb-12 text-bathhouse-black">Aufguss Benefits</h2>
           <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
             {benefits.map((benefit, index) => (
               <div key={index} className="flex items-start">
                 <div className="w-2 h-2 bg-bathhouse-teal rounded-full mt-2 mr-4 flex-shrink-0" />
-                <p className="text-lg text-gray-700">{benefit}</p>
+                <p className="text-lg text-bathhouse-slate">{benefit}</p>
               </div>
             ))}
           </div>

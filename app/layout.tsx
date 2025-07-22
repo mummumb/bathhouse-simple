@@ -1,29 +1,27 @@
 import type React from "react"
 import type { Metadata, Viewport } from "next"
-import { Inter_Tight, Outfit } from "next/font/google"
+import { Inter_Tight, Inter } from "next/font/google"
 import { ThemeProvider } from "@/components/theme-provider"
 import Navigation from "@/components/navigation"
 import Footer from "@/components/footer"
 import { Toaster } from "@/components/ui/sonner"
 import ServiceWorkerRegister from "@/components/service-worker-register"
 import { cn } from "@/lib/utils"
-import "@/styles/globals.css"
-import "@/styles/bathhouse-theme.css"
+import "./globals.css"
+
+const inter = Inter({
+  subsets: ["latin"],
+  variable: "--font-inter",
+  display: "swap",
+  preload: true,
+})
 
 const interTight = Inter_Tight({
   subsets: ["latin"],
-  variable: "--font-inter",
+  variable: "--font-inter-tight",
+  display: "swap",
   weight: ["300", "400", "500", "600"],
-  display: "swap",
-})
-
-// Outfit is a good alternative to Bagoss Standard
-// It has similar geometric qualities with friendly curves
-const outfit = Outfit({
-  subsets: ["latin"],
-  variable: "--font-outfit",
-  weight: ["300", "400", "500"],
-  display: "swap",
+  preload: true,
 })
 
 export const metadata: Metadata = {
@@ -72,7 +70,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={cn("min-h-screen bg-bathhouse-cream font-sans antialiased", interTight.variable, outfit.variable)}>
+      <body className={`${interTight.variable} ${inter.variable} font-sans antialiased bg-white text-black`}>
         <ThemeProvider attribute="class" defaultTheme="light" enableSystem disableTransitionOnChange>
           <Navigation />
           <main className="flex-grow pt-20">{children}</main>

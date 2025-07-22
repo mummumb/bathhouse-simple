@@ -27,7 +27,7 @@ export default function Navigation() {
       className={cn(
         "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
         scrolled
-          ? "bg-white shadow-sm py-3" 
+          ? "bg-white/95 backdrop-blur-sm shadow-sm py-3" 
           : "bg-transparent py-5"
       )}
     >
@@ -36,11 +36,11 @@ export default function Navigation() {
           {/* Logo Only - Centered */}
           <Link href="/" className="relative z-10">
             <Image
-              src="/images/BathhouseStudio_Logo_RGB_Black.svg"
+              src={scrolled ? "/images/BathhouseStudio_Logo_RGB_Black.svg" : "/images/BathhouseStudio_Logo_RGB_REV.svg"}
               alt="Bathhouse Studio"
               width={180}
               height={40}
-              className="h-8 w-auto"
+              className="h-8 md:h-10 w-auto"
               priority
             />
           </Link>

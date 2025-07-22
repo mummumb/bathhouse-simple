@@ -20,10 +20,10 @@ export default async function HomePage() {
       />
       
       {/* What Is Aufguss Section */}
-      <section className="py-16 md:py-24 bg-white">
-        <div className="container mx-auto px-4">
-          <h2 className="text-3xl md:text-4xl font-light text-center mb-8">What Is Aufguss</h2>
-          <p className="text-lg text-center max-w-3xl mx-auto text-gray-700">
+      <section className="bathhouse-section bg-bathhouse-cream">
+        <div className="bathhouse-container">
+          <h2 className="bathhouse-heading text-4xl md:text-5xl text-center mb-8 text-bathhouse-black">What Is Aufguss</h2>
+          <p className="text-lg md:text-xl text-center max-w-3xl mx-auto text-bathhouse-slate leading-relaxed">
             Aufguss is a traditional sauna ritual that combines aromatherapy, rhythmic towel waving, 
             and intentional heat distribution to create a transformative wellness experience.
           </p>
@@ -31,12 +31,12 @@ export default async function HomePage() {
       </section>
 
       {/* Meet the Sauna Master */}
-      <section className="py-16 md:py-24 bg-gray-50">
-        <div className="container mx-auto px-4">
+      <section className="bathhouse-section bg-white">
+        <div className="bathhouse-container">
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-light mb-8">Meet the Sauna Master</h2>
-            <h3 className="text-2xl font-light mb-6">Amanda</h3>
-            <blockquote className="text-xl italic text-gray-700 mb-8">
+            <h2 className="bathhouse-heading text-4xl md:text-5xl mb-8 text-bathhouse-black">Meet the Sauna Master</h2>
+            <h3 className="bathhouse-heading text-2xl md:text-3xl mb-6 text-bathhouse-black">Amanda</h3>
+            <blockquote className="text-xl md:text-2xl italic text-bathhouse-slate mb-12 max-w-3xl mx-auto">
               "A Sauna is not just about heat—it's about community, ritual, and the transformative power of intentional wellness."
             </blockquote>
             <img 
@@ -52,28 +52,28 @@ export default async function HomePage() {
       <AufgussSimple />
 
       {/* Upcoming Events */}
-      <section className="py-16 md:py-24 bg-white">
-        <div className="container mx-auto px-4">
-          <h2 className="text-3xl md:text-4xl font-light text-center mb-12">Upcoming Events</h2>
+      <section className="bathhouse-section bg-bathhouse-cream">
+        <div className="bathhouse-container">
+          <h2 className="bathhouse-heading text-4xl md:text-5xl text-center mb-12 text-bathhouse-black">Upcoming Events</h2>
           <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-            <div className="bg-gray-50 p-8 rounded-lg text-center">
-              <h3 className="text-2xl font-light mb-4">Aufguss: September</h3>
-              <p className="text-gray-700 mb-4">90 Min Ritual</p>
-              <p className="text-gray-600 mb-6">Location TBC</p>
+            <div className="bg-white p-8 rounded-lg text-center shadow-sm">
+              <h3 className="bathhouse-heading text-2xl md:text-3xl mb-4 text-bathhouse-black">Aufguss: September</h3>
+              <p className="text-bathhouse-slate mb-4">90 Min Ritual</p>
+              <p className="text-bathhouse-slate/70 mb-6">Location TBC</p>
               <a 
                 href="/book" 
-                className="inline-block bg-black text-white px-6 py-3 rounded hover:bg-gray-800 transition-colors"
+                className="inline-block bg-bathhouse-black text-bathhouse-white px-8 py-3 rounded-md hover:bg-bathhouse-slate transition-colors"
               >
                 Click to Register
               </a>
             </div>
-            <div className="bg-gray-50 p-8 rounded-lg text-center">
-              <h3 className="text-2xl font-light mb-4">Bathhouse Ritual: November</h3>
-              <p className="text-gray-700 mb-4">2 hours of Breathwork, Sound Healing, Sauna & Ice</p>
-              <p className="text-gray-600 mb-6">Location TBC</p>
+            <div className="bg-white p-8 rounded-lg text-center shadow-sm">
+              <h3 className="bathhouse-heading text-2xl md:text-3xl mb-4 text-bathhouse-black">Bathhouse Ritual: November</h3>
+              <p className="text-bathhouse-slate mb-4">2 hours of Breathwork, Sound Healing, Sauna & Ice</p>
+              <p className="text-bathhouse-slate/70 mb-6">Location TBC</p>
               <a 
                 href="/book" 
-                className="inline-block bg-black text-white px-6 py-3 rounded hover:bg-gray-800 transition-colors"
+                className="inline-block bg-bathhouse-black text-bathhouse-white px-8 py-3 rounded-md hover:bg-bathhouse-slate transition-colors"
               >
                 Click to Register
               </a>
